@@ -1,25 +1,29 @@
 import axios from '../utils/axios';
 
-const register = (name, email, password) => {
-  return axios.post('/users/register', { name, email, password });
+const authService = {
+  register: (name, email, password) => {
+    return axios.post('/users/register', { name, email, password });
+  },
+
+  login: (email, password) => {
+    return axios.post('/users/login', { email, password })
+      .then(response => {
+        if (response.data.token) {
+          localStorage.setItem('token', response.data.token);
+          localStorage.setItem('user', JSON.stringify(response.data.user));
+        }
+        return response;
+      });
+  },
+
+  logout: () => {
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
+  },
+
+  getCurrentUser: () => {
+    return JSON.parse(localStorage.getItem('user'));
+  }
 };
 
-const login = (email, password) => {
-  return axios.post('/users/login', { email, password });
-};
-
-const logout = () => {
-  localStorage.removeItem('token');
-  localStorage.removeItem('user');
-};
-
-const getCurrentUser = () => {
-  return JSON.parse(localStorage.getItem('user'));
-};
-
-export default {
-  register,
-  login,
-  logout,
-  getCurrentUser,
-};
+export default authService;

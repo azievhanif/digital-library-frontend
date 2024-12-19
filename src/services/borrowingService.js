@@ -1,19 +1,17 @@
 import axios from '../utils/axios';
 
-const borrowBook = (bookId) => {
-  return axios.post('/borrowings/borrow', { bookId });
+const borrowingService = {
+  borrowBook: (bookId) => {
+    return axios.post('/borrowings/borrow', { bookId });
+  },
+
+  returnBook: (borrowingId) => {
+    return axios.post('/borrowings/return', { borrowingId });
+  },
+
+  getUserBorrowings: () => {
+    return axios.get('/borrowings/my-borrowings');
+  }
 };
 
-const returnBook = (borrowingId) => {
-  return axios.post('/borrowings/return', { borrowingId });
-};
-
-const getUserBorrowings = () => {
-  return axios.get('/borrowings/my-borrowings');
-};
-
-export default {
-  borrowBook,
-  returnBook,
-  getUserBorrowings
-};
+export default borrowingService;
