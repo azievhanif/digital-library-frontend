@@ -6,7 +6,6 @@ import authService from '../../services/authService';
 const NavigationBar = () => {
   const navigate = useNavigate();
   const currentUser = authService.getCurrentUser();
-  const isAdmin = currentUser?.role === 'admin';
   const isMember = currentUser?.role === 'member';
 
   const handleLogout = () => {

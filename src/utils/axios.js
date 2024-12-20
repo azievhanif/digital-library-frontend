@@ -1,7 +1,6 @@
 import axios from 'axios';
 
 const instance = axios.create({
-  // baseURL: 'http://localhost:3001/api/v1',
   baseURL: 'https://digital-library-backend-lyart.vercel.app/api/v1'
 });
 

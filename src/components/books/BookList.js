@@ -60,11 +60,9 @@ const BookList = () => {
   const handleFormSubmit = async (formData) => {
     try {
       if (selectedBook) {
-        // Edit existing book
         await bookService.updateBook(selectedBook.id, formData);
         setSuccessMessage('Buku berhasil diperbarui');
       } else {
-        // Add new book
         await bookService.createBook(formData);
         setSuccessMessage('Buku berhasil ditambahkan');
       }
@@ -79,7 +77,6 @@ const BookList = () => {
     loadBooks();
   }, []);
 
-  // Clear messages after 3 seconds
   useEffect(() => {
     if (successMessage || error) {
       const timer = setTimeout(() => {
