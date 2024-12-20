@@ -1,41 +1,54 @@
-import React from 'react';
-import { Card, Button } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Card, Badge } from 'react-bootstrap';
 import authService from '../../services/authService';
+import BookDetail from './BookDetail';
 
 const BookCard = ({ book, onBorrow, onEdit, onDelete }) => {
+  const [showModal, setShowModal] = useState(false);
   const currentUser = authService.getCurrentUser();
-  const isAdmin = currentUser?.role === 'admin';
 
   return (
-    <Card className="h-100">
-      <Card.Body>
-        <Card.Title>{book.title}</Card.Title>
-        <Card.Text>{book.description}</Card.Text>
-        <div className="d-flex justify-content-between align-items-center">
-          <span className={`badge bg-${book.status === 'available' ? 'success' : 'warning'}`}>
+    <>
+      <Card 
+        className="h-100 book-card shadow-sm" 
+        onClick={() => setShowModal(true)}
+        style={{ cursor: 'pointer' }}
+      >
+        <div className="position-relative">
+          <Card.Img 
+            variant="top" 
+            src={book.coverImage || '/images/book-covers/default.png'} 
+            className="card-img"
+            style={{ height: '200px', objectFit: 'cover' }}
+          />
+          <Badge 
+            bg={book.status === 'available' ? 'success' : 'warning'}
+            className="position-absolute top-0 end-0 m-2"
+          >
             {book.status === 'available' ? 'Tersedia' : 'Dipinjam'}
-          </span>
-          <small className="text-muted">{book.genre}</small>
+          </Badge>
         </div>
-        <div className="mt-3">
-          {book.status === 'available' && currentUser && !isAdmin && (
-            <Button variant="primary" onClick={() => onBorrow(book.id)}>
-              Pinjam
-            </Button>
-          )}
-          {isAdmin && (
-            <>
-              <Button variant="warning" className="me-2" onClick={() => onEdit(book)}>
-                Edit
-              </Button>
-              <Button variant="danger" onClick={() => onDelete(book.id)}>
-                Hapus
-              </Button>
-            </>
-          )}
-        </div>
-      </Card.Body>
-    </Card>
+        <Card.Body>
+          <Card.Title className="h5 mb-2">{book.title}</Card.Title>
+          <Card.Text className="text-truncate" style={{ maxHeight: '3rem' }}>
+            {book.description}
+          </Card.Text>
+          <div className="mt-auto">
+            <span className="badge bg-light text-dark">{book.genre}</span>
+          </div>
+        </Card.Body>
+      </Card>
+
+      <BookDetail
+        show={showModal}
+        onHide={() => setShowModal(false)}
+        book={book}
+        onBorrow={onBorrow}
+        onEdit={onEdit}
+        onDelete={onDelete}
+        currentUser={currentUser}
+      />
+    </>
   );
 };
 

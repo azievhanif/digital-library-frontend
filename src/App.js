@@ -10,13 +10,15 @@ import Register from './components/auth/Register';
 import BookList from './components/books/BookList';
 import BorrowingList from './components/borrowing/BorrowingList';
 import Profile from './components/profile/Profile';
+import HomePage from './components/home/HomePage';
 
 function App() {
   return (
     <Router>
       <NavigationBar />
       <Routes>
-        <Route path="/" element={<BookList />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/books" element={<BookList />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route
