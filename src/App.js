@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-// Components
 import NavigationBar from './components/layout/Navbar';
 import PrivateRoute from './components/layout/PrivateRoute';
 import Login from './components/auth/Login';
