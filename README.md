@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# 📚 Digital Library (Front-End)
+This is a final project for the Celerates Acceleration Mastery Program: Full Stack.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# ⚙️ Features
+- **User Management:**
+1. Register
+2. Login
+3. View user profile
 
-## Available Scripts
+- **Book Management:**
+1. Search for books
+2. Add books (admin only)
+3. Update books (admin only)
+4. Delete books (admin only)
 
-In the project directory, you can run:
+- **Borrowing Management:**
+1. Borrow books
+2. Return books
+3. View borrowing history
 
-### `npm start`
+# 🛠️ Installation
+1. Clone the project.
+   ```
+   git clone https://github.com/azievhanif/digital-library-frontend
+   ```
+2. Go to the project directory.
+   ```
+   cd digital-library-frontend
+   ```
+3. Install dependencies.
+   ```
+   npm install
+   ```
+4. Start the project.
+   ```
+   npm run start
+   ```
+# 🚨 Notes!!
+Ensure the API is running!<br><br>
+You can check here:   
+https://github.com/azievhanif/digital-library-backend (for the back-end)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# 💻 Live Website
+https://digital-library-rho-khaki.vercel.app/<br><br>
+You can use this admin account<br>
+Email: john@admin.com  
+Password: password123
