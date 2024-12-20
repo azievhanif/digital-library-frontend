@@ -27,9 +27,9 @@ This is a final project for the Celerates Acceleration Mastery Program: Full Sta
 <img width="1680" alt="Screenshot 2024-12-20 at 14 05 12" src="https://github.com/user-attachments/assets/8a7479e7-2c6d-4302-ae43-cd0b86774ab3" /> <br><br>
 **Profile Page**<br><br>
 <img width="1680" alt="Screenshot 2024-12-20 at 14 02 38" src="https://github.com/user-attachments/assets/b159f2ea-4876-43f3-9e17-f9c16c4104d5" /> <br><br>
-**Book Page**<br><br>
+**Book Page**<br><br><br>
 <img width="1680" alt="Screenshot 2024-12-20 at 14 04 09" src="https://github.com/user-attachments/assets/7b26798a-0feb-49a9-85fb-5e8cd6c6ebc1" /> <br><br>
-**Borrowing Page**
+**Borrowing Page**<br><br>
 <img width="1680" alt="Screenshot 2024-12-20 at 14 04 34" src="https://github.com/user-attachments/assets/db20550b-1cb3-464c-a451-3446a1959e0b" /> <br><br>
 
 # 🛠️ Installation
